@@ -5,7 +5,7 @@ interface HeaderProps {}
 
 export function Header({}: HeaderProps) {
   return (
-    <div className='flex justify-between p-6 items-center'>
+    <div className='flex justify-between px-[24px] py-[16px]  items-center text-sm'>
       <div className='flex space-x-4 items-center'>
         <Link className='hover:underline' href='#'>
           About
@@ -14,6 +14,7 @@ export function Header({}: HeaderProps) {
           Store
         </Link>
       </div>
+
       <div className='flex space-x-4 items-center'>
         <Link className='hover:underline' href='#'>
           Gmail

@@ -23,11 +23,10 @@ export function User({}: UserProps) {
 
   return (
     <Image
-      // @ts-ignore
-      src={session?.user?.image}
+      src={session.user?.image ?? ''}
       alt='userImage'
-      width={40}
-      height={40}
+      width={32}
+      height={32}
       className='rounded-full cursor-pointer p-[1.5px] border border-gray-300 hover:scale-110 transition-transform duration-200 ease-out'
       onClick={() => signOut()}
     />
