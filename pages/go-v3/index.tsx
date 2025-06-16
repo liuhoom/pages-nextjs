@@ -1,15 +1,23 @@
 import Image from 'next/image'
+import Head from 'next/head'
 
 import { Header } from '@/components/go-v3/Header'
+import { Footer } from '@/components/go-v3/Footer'
 
 export default function GoV3Page() {
   return (
-    <div className=''>
+    <div className='flex flex-col min-h-screen'>
+      <Head>
+        <title>Google-clone</title>
+        <meta name='description' content='Search the world wide web' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       {/* Header */}
       <Header />
 
       {/* Body */}
-      <form className='w-full items-center justify-center mx-auto mt-20'>
+      <form className='w-full items-center justify-center mx-auto mt-20 flex-glow'>
         <Image
           src='/google.png'
           alt='googleImage'
@@ -40,7 +48,7 @@ export default function GoV3Page() {
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
               fill='currentColor'
-              className='size-5 cursor-pointer text-gray-600'
+              className='size-5 cursor-pointer text-gray-500'
             >
               <path d='M8.25 4.5a3.75 3.75 0 1 1 7.5 0v8.25a3.75 3.75 0 1 1-7.5 0V4.5Z' />
               <path d='M6 10.5a.75.75 0 0 1 .75.75v1.5a5.25 5.25 0 1 0 10.5 0v-1.5a.75.75 0 0 1 1.5 0v1.5a6.751 6.751 0 0 1-6 6.709v2.291h3a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5h3v-2.291a6.751 6.751 0 0 1-6-6.709v-1.5A.75.75 0 0 1 6 10.5Z' />
@@ -50,7 +58,7 @@ export default function GoV3Page() {
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
               fill='currentColor'
-              className='size-5 cursor-pointer text-gray-600'
+              className='size-5 cursor-pointer text-gray-500'
             >
               <path
                 fill-rule='evenodd'
@@ -61,16 +69,16 @@ export default function GoV3Page() {
           </div>
         </div>
 
-        <div className='flex items-center justify-center my-7 gap-x-4 text-sm'>
+        <div className='flex items-center justify-center my-20 gap-x-4 text-sm'>
           <button
-            className='bg-gray-100 text-black px-4 py-2 rounded-md'
+            className='bg-gray-100 text-black px-4 py-2 rounded-md cursor-pointer'
             onClick={() => {}}
           >
             Google Search
           </button>
 
           <button
-            className='bg-gray-100 text-black px-4 py-2 rounded-md'
+            className='bg-gray-100 text-black px-4 py-2 rounded-md cursor-pointer'
             onClick={() => {}}
           >
             I&apos;m Feeling Lucky
@@ -79,7 +87,7 @@ export default function GoV3Page() {
       </form>
 
       {/* Footer */}
-      <div className=''></div>
+      <Footer />
     </div>
   )
 }
