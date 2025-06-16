@@ -3,8 +3,11 @@ import Head from 'next/head'
 
 import { Header } from '@/components/go-v3/Header'
 import { Footer } from '@/components/go-v3/Footer'
+import { useRef } from 'react'
 
 export default function GoV3Page() {
+  const searchInputRef = useRef<HTMLInputElement>(null)
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
@@ -41,7 +44,11 @@ export default function GoV3Page() {
             />
           </svg>
 
-          <input className='flex-grow focus:outline-none' type='text' />
+          <input
+            className='flex-grow focus:outline-none'
+            type='text'
+            ref={searchInputRef}
+          />
 
           <div className='space-x-4 hidden md:inline-flex'>
             <svg
@@ -72,7 +79,9 @@ export default function GoV3Page() {
         <div className='flex items-center justify-center my-20 gap-x-4 text-sm'>
           <button
             className='bg-gray-100 text-black px-4 py-2 rounded-md cursor-pointer'
-            onClick={() => {}}
+            onClick={() => {
+              console.log(searchInputRef.current?.value)
+            }}
           >
             Google Search
           </button>

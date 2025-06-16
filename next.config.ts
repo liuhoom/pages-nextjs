@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
       {
         hostname: 'avatars.githubusercontent.com',
       },
+      {
+        hostname: 'ts1.tc.mm.bing.net',
+      },
     ],
   },
 }
